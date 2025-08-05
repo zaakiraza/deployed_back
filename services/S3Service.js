@@ -3,12 +3,12 @@ const AWS = require("aws-sdk");
 class S3Service {
   constructor() {
     this.s3 = new AWS.S3({
-      accessKeyId: process.env.AWS_ACCESS_KEY,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-      region: process.env.AWS_S3_BUCKET_REGION,
+      accessKeyId: process.env.MYAPP_AWS_ACCESS_KEY,
+      secretAccessKey: process.env.MYAPP_AWS_SECRET_ACCESS_KEY,
+      region: process.env.MYAPP_S3_BUCKET_REGION,
       signatureVersion: "v4",
     });
-    this.bucketName = process.env.AWS_S3_BUCKET_NAME;
+    this.bucketName = process.env.MYAPP_S3_BUCKET_NAME;
   }
 
   /**

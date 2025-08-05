@@ -1,5 +1,5 @@
 const app = require("./app");
-const PORT = process.env.PORT || 5003;
+const PORT = process.env.APP_PORT || 5003;
 
 if(process.env.APP_ENV !== 'production') {
   app.listen(PORT, () => {
